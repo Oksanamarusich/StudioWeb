@@ -14,39 +14,44 @@
 </head>
 
         <body>
-        <header class="header">
-            <div class=" header-container container">
-        
-                <nav class="menu-nav">
-                    <a class="logo link">Web<span class="logo-span">Studio</span></a>
-                    <ul class="header-nav-list list">
-                        <li>
-                            <a class="header-nav-link link" href="./index.html">Studio</a>
-                        </li>
-                        <li>
-                            <a class="header-nav-link link active" href="./portfolio.html">Portfolio</a>
-                        </li>
-                        <li>
-                            <a class="header-nav-link link" href="">Contacts</a>
-                        </li>
-                    </ul>
-                </nav>
-                <address class="contacts">
-                    <ul class="list contacts-list">
-                        <li class="link">
-                            <a class="header-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                        </li>
-                        <li class="link">
-                            <a class="header-contacts link" href="tel:+110001111111">+11 (000) 111-11-11</a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-        
-        
-        
-        
-        </header>
+            <header class="header">
+                <div class=" header-container container">
+                   <a class="logo link">Web<span class="logo-span">Studio</span></a>
+                    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                        <svg class="burger-menu" width="24" height="32">
+                          <use href="./images/icons.svg#burger-menu"></use>
+                        </svg>
+                    </button>
+                    
+                    <nav class="menu-nav">    
+                        <ul class="header-nav-list list">
+                            <li>
+                                <a class="header-nav-link link" href="./index.html">Studio</a>
+                            </li>
+                            <li>
+                                <a class="header-nav-link link active" href="./portfolio.html">Portfolio</a>
+                            </li>
+                            <li>
+                                <a class="header-nav-link link" href="">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <address class="contacts">
+                        <ul class="contacts-list list">
+                            <li class="link">
+                                <a class="header-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="link">
+                                <a class="header-contacts link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+    
+    
+    
+    
+            </header>
             <main>
                 <section class="section-portfolio">
                     <div class=" container">
@@ -234,7 +239,7 @@
             </main>
             
                 <footer class="section-footer">
-                <div class="footer-container container">
+                    <div class="footer-container container">
                         <div class="footer-primary">
                             <a class=" logo-footer logo link">Web<span class="logo-span-light">Studio</span></a>
                             <p class="light-text-body">Increase the flow of customers and sales for your business with digital marketing
@@ -277,36 +282,92 @@
                         </div>
                         <div class="footer-form">
                           <p class="footer-light-text">Subscribe</p>
-                    <form class="footer-subscribe-form" name="subscribe-form" autocomplete="on" novalidate>
-                       <div class="footer-subscribe">
-                          <label class="footer-subscribe-label" >
+                          <form class="footer-subscribe-form" name="subscribe-form" autocomplete="on" novalidate>
+                              <div class="footer-subscribe">
+                                  <label class="footer-subscribe-label" >
                            
-                            <input class="footer-input" type="email" name="email" required>
-                            <span class="text-form"> E-mail</span>
-                        </label>
+                                      <input class="footer-input" type="email" name="email" required>
+                                           <span class="text-form"> E-mail</span>
+                                    </label>
                         
-                        <button class=" btn-form btn" type="submit">Subscribe
-                            <svg class="icon-subscribe" width="24" height="24">
-                              <use href="./images/icons.svg#plane"></use>
-                            </svg>
-                        </button>
-                       </div>
-                        
-
+                            <button class=" btn-form btn" type="submit">Subscribe
+                                <svg class="icon-subscribe" width="24" height="24">
+                                  <use href="./images/icons.svg#plane"></use>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
-                </div>
                         
                           
-                    
-                                                           
-                    
-                    
-                
-                
-                
                 </footer>
-            
+                        <!--Mobile-menu-->
+            <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu list">
+        <li class="mobile-item"><a href="" class="link">Studio</a></li>
+        <li class="mobile-item"><a href="" class="active link">Portfolio</a></li>
+        <li class="mobile-item"><a href="" class="link">Contacts</a></li>
         
+      </ul>
+      <ul class="mobile-contacts list">
+        <li>
+            <a class="mobile-menu-phone link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li>
+             <a class="mobile-menu-email link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile-socials-icons list">
+        <li>
+            <a class="footer-socials-link socials-link link" href="">
+                <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#instagram"></use>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a class="footer-socials-link socials-link link" href="">
+                <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#twitter"></use>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a class="footer-socials-link socials-link link" href="">
+                <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#facebook"></use>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a class="footer-socials-link socials-link link" href="">
+                <svg class="socials-icon" width="24" height="24">
+                    <use href="./images/icons.svg#linkedin"></use>
+                </svg>
+            </a>
+        </li>
+      </ul>
+    </div>
+            
+
+                    <!--Mobile-menu scripts-->
+                    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js" integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA==" crossorigin="anonymous"></script>
+                    <script defer src="./js/mobile-menu.js"></script> 
         
         </body>
 
