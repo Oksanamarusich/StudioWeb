@@ -1064,10 +1064,11 @@ fill: var(--secondary-accent-color);
   }
 }
 .list-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  
   margin-bottom: 48px;
+  --items: 3;
+  --indent-vertical: 24px;
+  --indent-horizontal: 16px;
 }
 @media only screen and (min-width: 768px) {
   .list-buttons {
@@ -1080,18 +1081,21 @@ fill: var(--secondary-accent-color);
     margin-bottom: 72px;
   }
 }
-.buttons-portfolio {
-  display:flex;
-  justify-content: center;
-  padding-top: 96px;
-  padding-right: auto;
-  padding-bottom: 72px;
-  padding-left: auto;
+
+.portfolio-buttons {
+  padding: 8px 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  .portfolio-buttons {
+    padding: 12px 24px;
+  }
 }
 
 .portfolio-link  {
   display: block;
-
+  color: var(--main-text-color);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover, 
@@ -1114,8 +1118,8 @@ border-left:1px solid var(--border-buttoms); ;
 .card-list {
 display: flex;
 flex-wrap: wrap;
-row-gap: 48px
-}*/
+row-gap: 48px;
+}
 
 .team-thumb {
   position: relative;
@@ -1143,7 +1147,11 @@ row-gap: 48px
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media only screen and (max-width: 1157px) {
+  .overlay-text {
+    display: none;
+  }
+}
 
 
 
