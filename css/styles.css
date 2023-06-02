@@ -117,7 +117,8 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-
+  object-fit: cover;
+  object-position: center;
 }
 #hidden {
   position: absolute;
@@ -364,6 +365,7 @@ flex-basis: calc (100%-var(--indent-vertical)* ((var(--items)-1))/ var(--items))
   text-transform: capitalize;
    color: var(--primary-accent-color);
 }
+
 .mobile-menu-email {
 
   font-weight: 500;
@@ -1064,11 +1066,15 @@ fill: var(--secondary-accent-color);
   }
 }
 .list-buttons {
-  
+  display: flex;
+  gap: 16px 24px;
+  flex-wrap: wrap;
   margin-bottom: 48px;
-  --items: 3;
-  --indent-vertical: 24px;
-  --indent-horizontal: 16px;
+}
+@media only screen and (min-width: 428px) {
+  .list-buttons {
+    --items: 3;
+  }
 }
 @media only screen and (min-width: 768px) {
   .list-buttons {
